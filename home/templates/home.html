@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <title> My Cute Home </title>
+    <meta charset="UTF-8"/>
+    <style>
+      a+a {
+        margin-left:5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Foda mto foda foda
+    </h1>
+    <a href=" {% url 'home' %}">Home</a>
+    <a href=" {% url 'card' %}">Card</a>
+    <a href=" {% url 'blog' %}">Blog</a>
+  </body>
+</html>
