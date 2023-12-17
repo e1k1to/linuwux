@@ -7,7 +7,8 @@
     <meta charset="UTF-8"/>
     <style>
       .post {
-        margin-right: 40px; 
+        margin-right: 240px;
+        margin-left: 200px; 
         padding: 1px 0 10px 20px;
       }
       a+a {
@@ -27,9 +28,9 @@
         {% for post in posts %}
         <div class="post" style="background-color: {{ post.color }};">
           <h2>{{ post.title }}</h2>
-          <p>{{ post.texto }}</p>
+          <p>{{ post.texto|linebreaks }}</p>
           {% if post.image %}
-            <img src= {{ post.image.url }} style="margin-left: 10px; max-width:500px; max-height:500px;">
+            <img src= {{ post.image.url }} style="margin-left: 10px; max-width:300px; max-height:300px;">
           {% endif %}
           <p> Assinado: {{ post.signt }} </p>
         </div>
