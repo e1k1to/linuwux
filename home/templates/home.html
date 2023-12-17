@@ -6,17 +6,113 @@
     <title> My Cute Home </title>
     <meta charset="UTF-8"/>
     <style>
+      img.wired {
+        position:absolute;
+        opacity: 0.3;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: 742px;
+        height: 632px;
+        margin-top: -316px;
+        margin-left: -371px;
+      }
+      h1.title {
+        font-size: 3em;
+      }
+      a {
+        text-decoration: none;
+        color: #BE7E8F;
+      }
       a+a {
-        margin-left:5px;
+        margin-left:40px;
+      }
+      body {
+        background: url("{% static 'bg_47.gif' %}");
+        color: #BE7E8F;
+      }
+      header {
+        background-color: black;
+        color: #BE7E8F;
+        padding: 10px;
+        padding-bottom: 40px;
+        width:50%;
+        text-align: center;
+        margin:auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      a.links {
+        font-size: 1.5em;
+      }
+      div.meio {
+        background-color: black;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        width: 50%;
+        margin:auto;
+      }
+      p.apresunto {
+        font-size: 1.5em;
+      }
+      div.flbox {
+        display: flex;
+        width:100%;
+        justify-content: space-evenly;
+      }
+      div.caixa {
+        width: 300px;
+        height: 350px;
+        padding-bottom: 5px;
+      }
+      img.imagem-click {
+        width: 300px;
+      }
+      p.centralizado {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <h1>
-      Foda mto foda foda
-    </h1>
-    <a href=" {% url 'home' %}">Home</a>
-    <a href=" {% url 'card' %}">Card</a>
-    <a href=" {% url 'blog' %}">Blog</a>
+    <img class="wired" src="{% static 'wirado.png' %}">
+    <header>
+        <h1 class="title">
+        Home Poggies :3
+        </h1>
+        <a class="links" href=" {% url 'home' %}">Home</a>
+        <a class="links" href=" {% url 'card' %}">Card</a>
+        <a class="links" href=" {% url 'blog' %}">Blog</a>
+    </header>
+    <br>
+    <div class="meio">
+      <p class="apresunto">
+        Oi, eu sou a mel mel e bem vindos ao meu site :D
+        <br>
+        <br>
+        Assim como mostram as opções ali em cima, o site é atualmente separado em 3 partes:
+      </p>
+      <div class="flbox">
+        <div class="caixa">
+          <a class="links" href=" {% url 'home' %}">
+          <img class="imagem-click" src="{% static 'home.gif' %}">
+          </a>
+          <p class="centralizado">A página que você está agr :D</p>
+        </div>
+        <div class="caixa">
+          <a class="links" href=" {% url 'card' %}">
+          <img class="imagem-click" src="{% static 'card.gif' %}">
+          </a>
+          <p class="centralizado">Uma página sobre mim :D</p>
+        </div>
+        <div class="caixa">
+          <a class="links" href=" {% url 'blog' %}">
+          <img class="imagem-click" src="{% static 'blog.gif' %}">
+          </a>
+          <p class="centralizado">Meu blog pessoal :D</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
