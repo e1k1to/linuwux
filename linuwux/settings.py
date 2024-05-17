@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-4-8*!%$b2_*r)288ns-+6#kco53uuo4ee#d9om(_j9$i^g(9om
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [f"{APP_NAME}.fly.dev"]
+ALLOWED_HOSTS = [f"{APP_NAME}.onrender.com"]
 
 
 # Application definition
